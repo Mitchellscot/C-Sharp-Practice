@@ -6577,11 +6577,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mitch\\Documents\\Code\\Practice\\test\\test.csproj",
+      "projectUniqueName": "g:\\OneDrive\\Projects\\Practice\\test\\test.csproj",
       "projectName": "test",
-      "projectPath": "C:\\Users\\Mitch\\Documents\\Code\\Practice\\test\\test.csproj",
+      "projectPath": "g:\\OneDrive\\Projects\\Practice\\test\\test.csproj",
       "packagesPath": "C:\\Users\\Mitch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mitch\\Documents\\Code\\Practice\\test\\obj\\",
+      "outputPath": "g:\\OneDrive\\Projects\\Practice\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mitch\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6596,6 +6596,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6607,6 +6608,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -6640,7 +6642,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

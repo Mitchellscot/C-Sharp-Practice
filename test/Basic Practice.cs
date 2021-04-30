@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using System.Linq;
 using System.IO;
-
+using System.Collections.Generic;
 
 namespace w3resource
 {
@@ -12,12 +12,68 @@ namespace w3resource
         public void Test()
         {
             // arrange
-            int a = ;
+            //int a = ;
             // act
 
             // assert
-            Assert.Equal();
+            //Assert.Equal();
         } */
+        [Fact]  
+         public void Test63() //capitalize every word in a sentance
+        {
+            // arrange
+            string phrase = "mitchell sarah henry lydia edward arthur";
+            // act
+            string[] words = phrase.Split(" ");
+            int pos = 0;
+            foreach (var word in words)
+            {
+                char[] w = word.ToCharArray();
+                w[0] = Char.ToUpper(w[0]);
+                words[pos] = new string(w);
+                pos++;
+            }
+            string result =  string.Join(" ", words);
+            // assert
+            Assert.Equal("Mitchell Sarah Henry Lydia Edward Arthur", result);
+        }
+        [Fact]   
+        public void Test62() //Create a function (or write a script in Shell) that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+        {
+            // arrange
+            int a = 8;
+            string answer = "";
+            // act
+/*             if (a % 2 == 0){
+                answer = "even";
+            }
+            else {
+                answer = "odd";
+            } */
+            answer = a % 2 == 0 ? "even" : "odd";
+            // assert
+            Assert.Equal("even", answer);
+        }
+        [Fact]  
+        public void Test61() // Create a function that computes the hamming distance between two strings (number of different characters)
+        {
+            string mitch = "mitchell";
+            string mitch2 = "Mi5fhelz";
+/*             string sarah = "sarah";
+            string sarah2 = "Saraz"; */
+            int ham = 0;
+            // arrange
+            for (int i = 0; i < mitch.Length; i++)
+            {
+                if (mitch[i] != mitch2[i]){
+                    ham++;
+                }
+            }
+            // act
+
+            // assert
+            Assert.Equal(4, ham);
+        } 
         [Fact]  
         public void Test60() //Create a function that takes a number n and returns its length.
         {

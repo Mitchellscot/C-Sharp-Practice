@@ -19,9 +19,15 @@ namespace w3resource
             Assert.Equal();
         } */
         [Fact]  
-        public void Test60() //check whether it is possible to create a strictly increasing sequence from a given sequence of integers as an array
+        public void Test60() //Create a function that takes a number n and returns its length.
         {
-            // What?
+            //arrange
+            int n = 300;
+            var str = n.ToString();
+            //act
+            var number = str.Length;
+            //assert
+            Assert.Equal(3, number);
         }
         [Fact]  
         public void Test58() //accept a list of integers and checks how many integers are needed to complete the range
@@ -379,7 +385,7 @@ namespace w3resource
             // assert
             Assert.Equal(a, answer);
         }
-        [Fact]
+/*         [Fact]
         public void Test29() // find the size of a specified file in bytes
         {
             // arrange
@@ -389,7 +395,7 @@ namespace w3resource
             int bytes = (int)fi.Length;
             // assert
             Assert.Equal(15, bytes);
-        }
+        } */
         [Fact]
         public void Test28() //reverse the words of a sentance
         {
@@ -690,7 +696,7 @@ namespace w3resource
             int d = x / y;
             int e = x % y;
 
-            Console.WriteLine($"{x} + {y} = {a}\n{x} - {y} = {b}\n{x} * {y} = {c}\n{x} / {y} = {d}\n{x} mod {y} = {e}\n");
+            /* Console.WriteLine($"{x} + {y} = {a}\n{x} - {y} = {b}\n{x} * {y} = {c}\n{x} / {y} = {d}\n{x} mod {y} = {e}\n"); */
 
             Assert.Equal(29, a);
             Assert.Equal(21, b);
@@ -705,8 +711,8 @@ namespace w3resource
             int b = 3;
             int c = 6;
 
-            Console.WriteLine($"{a * b * c}");
-
+/*             Console.WriteLine($"{a * b * c}");
+ */
             Assert.Equal(36, a * b * c);
             /* static void Main(string[] args)
             {
@@ -755,8 +761,8 @@ namespace w3resource
             int c = 14 + -4 * 6 / 11;
             int d = 2 + 15 / 6 * 1 - 7 % 2;
 
-            Console.WriteLine($"{a}\n{b}\n{c}\n{d}");
-
+/*             Console.WriteLine($"{a}\n{b}\n{c}\n{d}");
+ */
             Assert.Equal(43, a + b + c + d);
         }
         [Fact]
@@ -765,9 +771,9 @@ namespace w3resource
             int a = 2;
             int b = 4;
 
-            Console.WriteLine(b / a);
-
-            Assert.Equal(2, 4 / 2);
+/*             Console.WriteLine(b / a);
+ */
+            Assert.Equal(2, b / a);
         }
         [Fact]
         public void Test2()
@@ -775,17 +781,14 @@ namespace w3resource
             int a = 2;
             int b = 4;
 
-            Console.WriteLine(a + b);
-
+/*             Console.WriteLine(a + b);
+ */
             Assert.Equal(6, a + b);
         }
         [Fact]
         public void Test1()
         {
             string name = "Hello Mitchell";
-
-            Console.WriteLine($"{name}");
-
             Assert.Equal("Hello Mitchell", name);
         }
 

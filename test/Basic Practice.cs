@@ -8,7 +8,7 @@ namespace w3resource
 {
     public class BasicPractice
     {
-        /* [Fact]  
+        /* [Fact]
         public void Test()
         {
             // arrange
@@ -18,8 +18,23 @@ namespace w3resource
             // assert
             //Assert.Equal();
         } */
-        [Fact]  
-         public void Test63() //capitalize every word in a sentance
+        [Fact]  //given a string of words, return the length of the shortest word(s).
+        public void Test()
+        {
+            string s = "Mitchell Sarah Henry Lydia Edward Arthur";
+            int longest = 10000;
+            var newArray = s.Split(" ");
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                if (newArray[i].Length < longest)
+                {
+                    longest = newArray[i].Length;
+                }
+            }
+            Assert.Equal(5, longest);
+        }
+        [Fact]
+        public void Test63() //capitalize every word in a sentance
         {
             // arrange
             string phrase = "mitchell sarah henry lydia edward arthur";
@@ -33,39 +48,43 @@ namespace w3resource
                 words[pos] = new string(w);
                 pos++;
             }
-            string result =  string.Join(" ", words);
+            string result = string.Join(" ", words);
             // assert
             Assert.Equal("Mitchell Sarah Henry Lydia Edward Arthur", result);
+            //a cooler way with Linq:
+            //return String.Join(" ", phrase.Split().Select(i => Char.ToUpper(i[0]) + i.Substring(1)));
+
         }
-        [Fact]   
+        [Fact]
         public void Test62() //Create a function (or write a script in Shell) that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
         {
             // arrange
             int a = 8;
             string answer = "";
             // act
-/*             if (a % 2 == 0){
-                answer = "even";
-            }
-            else {
-                answer = "odd";
-            } */
+            /*             if (a % 2 == 0){
+                            answer = "even";
+                        }
+                        else {
+                            answer = "odd";
+                        } */
             answer = a % 2 == 0 ? "even" : "odd";
             // assert
             Assert.Equal("even", answer);
         }
-        [Fact]  
+        [Fact]
         public void Test61() // Create a function that computes the hamming distance between two strings (number of different characters)
         {
             string mitch = "mitchell";
             string mitch2 = "Mi5fhelz";
-/*             string sarah = "sarah";
-            string sarah2 = "Saraz"; */
+            /*             string sarah = "sarah";
+                        string sarah2 = "Saraz"; */
             int ham = 0;
             // arrange
             for (int i = 0; i < mitch.Length; i++)
             {
-                if (mitch[i] != mitch2[i]){
+                if (mitch[i] != mitch2[i])
+                {
                     ham++;
                 }
             }
@@ -73,8 +92,8 @@ namespace w3resource
 
             // assert
             Assert.Equal(4, ham);
-        } 
-        [Fact]  
+        }
+        [Fact]
         public void Test60() //Create a function that takes a number n and returns its length.
         {
             //arrange
@@ -85,39 +104,39 @@ namespace w3resource
             //assert
             Assert.Equal(3, number);
         }
-        [Fact]  
+        [Fact]
         public void Test58() //accept a list of integers and checks how many integers are needed to complete the range
         {
             // arrange
-            int[] a = {0,1,2,3,4,5,6,7,8,9,100};
+            int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 100 };
             // act
-            int an = Math.Abs(a.Length - a[a.Length-1]); 
+            int an = Math.Abs(a.Length - a[a.Length - 1]);
             // assert
-            
+
             Assert.Equal(89, an);
         }
-        [Fact]  
+        [Fact]
         public void Test57() //find the pair of adjacent elements that has the highest product of an given array of integers
         {
             // arrange
-            int[] a = {1,2,3,4,5,6,7,8,9,1,2,3,4,5};
+            int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5 };
             int m = 0;
             int p1 = 0;
             int p2 = 0;
             // act
-            for (int i = 0; i < a.Length-1; i++)
+            for (int i = 0; i < a.Length - 1; i++)
             {
-                if (a[i]*a[i+1] > m)
+                if (a[i] * a[i + 1] > m)
                 {
-                    m = a[i]*a[i+1];
+                    m = a[i] * a[i + 1];
                     p1 = a[i];
-                    p2 = a[i+1];
+                    p2 = a[i + 1];
                 }
             }
             // assert
             Assert.Equal(72, m);
         }
-        [Fact]  
+        [Fact]
         public void Test56() // check if a given string is a palindrome or not
         {
             // arrange
@@ -125,18 +144,18 @@ namespace w3resource
             string r = String.Empty;
             bool b = false;
             // act
-            for (int i = p.Length -1; i >= 0; i--)
+            for (int i = p.Length - 1; i >= 0; i--)
             {
-               r += p[i]; 
+                r += p[i];
             }
-            if (p==r)
+            if (p == r)
             {
                 b = true;
             }
             // assert
             Assert.True(b);
         }
-        [Fact]  
+        [Fact]
         public void Test54() // get the century from a year
         {
             // arrange
@@ -144,21 +163,21 @@ namespace w3resource
             // act
 
             // assert
-            Assert.Equal(20, a/100+1);
+            Assert.Equal(20, a / 100 + 1);
         }
-        [Fact]  
+        [Fact]
         public void Test53() //check if an array contains an odd number
         {
             // arrange
-            int[] a = {3, 4, 6, 8, 10};
+            int[] a = { 3, 4, 6, 8, 10 };
             bool b = false;
             // act
             foreach (var n in a)
             {
                 if (n % 2 != 0)
                 {
-                    b=true;
-                } 
+                    b = true;
+                }
             }
             // assert
             Assert.True(b);
@@ -166,26 +185,26 @@ namespace w3resource
         [Fact]
         public void Test52() //create a new array of length containing the middle elements of three arrays (each length 3) of integers
         {
-            int[] a = {5,6,2};
-            int[] b = {7,0,7};
-            int[] c = {2,1,8};
-            
-            int[] d = {a[1], b[1], c[1]};
+            int[] a = { 5, 6, 2 };
+            int[] b = { 7, 0, 7 };
+            int[] c = { 2, 1, 8 };
 
-            int[] e = {6,0,1};
-            Assert.Equal(e,d);
+            int[] d = { a[1], b[1], c[1] };
+
+            int[] e = { 6, 0, 1 };
+            Assert.Equal(e, d);
 
         }
         [Fact]
         public void Test51() //get the larger value between first and last element of an array (length 3) of integers
         {
-            int[] a = {20,3,4,5,6,7,8,900,10,1,9,90,100, 200,2,3,5};
+            int[] a = { 20, 3, 4, 5, 6, 7, 8, 900, 10, 1, 9, 90, 100, 200, 2, 3, 5 };
             int b = 0;
             foreach (var i in a)
             {
-                if (i>b)
+                if (i > b)
                 {
-                    b=i;
+                    b = i;
                 }
             }
             Assert.Equal(900, b);
@@ -193,14 +212,14 @@ namespace w3resource
         [Fact]
         public void Test50() // rotate an array (length 3) of integers in left direction
         {
-            int[] a = {1,2,3,4,5,6,7,8,9,10};
-            int[] b = {2,3,4,5,6,7,8,9,10,1};
-            int temp =a[0];
-            for (int i = 0; i < a.Length-1; i++)
+            int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] b = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 1 };
+            int temp = a[0];
+            for (int i = 0; i < a.Length - 1; i++)
             {
-             a[i] = a[i+1];
+                a[i] = a[i + 1];
             }
-            a[a.Length-1] = temp; 
+            a[a.Length - 1] = temp;
             Assert.Equal(b, a);
         }
         [Fact]
@@ -397,9 +416,9 @@ namespace w3resource
         [Fact]
         public void Test32() //create a new string of four copies, taking last four characters from a given string. If the length of the given string is less than 4 return the original one
         {
-   
+
             // arrange
-            string  s = "I think my wife will give birth today";
+            string s = "I think my wife will give birth today";
             char[] arr = s.ToCharArray();
             string answer = "";
             // act
@@ -407,11 +426,11 @@ namespace w3resource
                 Console.WriteLine("not enough characters in string");
             else
             {
-                string print = String.Join("", arr[arr.Length-4], arr[arr.Length-3], arr[arr.Length-2], arr[arr.Length-1]);
-                answer = print+print+print+print;
+                string print = String.Join("", arr[arr.Length - 4], arr[arr.Length - 3], arr[arr.Length - 2], arr[arr.Length - 1]);
+                answer = print + print + print + print;
             }
             // assert
-           Assert.Equal("odayodayodayoday", answer);
+            Assert.Equal("odayodayodayoday", answer);
         }
         [Fact]
         public void Test31() //multiply corresponding elements of two arrays of integers
@@ -441,17 +460,17 @@ namespace w3resource
             // assert
             Assert.Equal(a, answer);
         }
-/*         [Fact]
-        public void Test29() // find the size of a specified file in bytes
-        {
-            // arrange
-            string path = @"C:\Users\Mitch\Documents\Code\Practice\src\DummyDoc.txt";
-            FileInfo fi = new FileInfo(path);
-            // act
-            int bytes = (int)fi.Length;
-            // assert
-            Assert.Equal(15, bytes);
-        } */
+        /*         [Fact]
+                public void Test29() // find the size of a specified file in bytes
+                {
+                    // arrange
+                    string path = @"C:\Users\Mitch\Documents\Code\Practice\src\DummyDoc.txt";
+                    FileInfo fi = new FileInfo(path);
+                    // act
+                    int bytes = (int)fi.Length;
+                    // assert
+                    Assert.Equal(15, bytes);
+                } */
         [Fact]
         public void Test28() //reverse the words of a sentance
         {
@@ -767,8 +786,8 @@ namespace w3resource
             int b = 3;
             int c = 6;
 
-/*             Console.WriteLine($"{a * b * c}");
- */
+            /*             Console.WriteLine($"{a * b * c}");
+             */
             Assert.Equal(36, a * b * c);
             /* static void Main(string[] args)
             {
@@ -817,8 +836,8 @@ namespace w3resource
             int c = 14 + -4 * 6 / 11;
             int d = 2 + 15 / 6 * 1 - 7 % 2;
 
-/*             Console.WriteLine($"{a}\n{b}\n{c}\n{d}");
- */
+            /*             Console.WriteLine($"{a}\n{b}\n{c}\n{d}");
+             */
             Assert.Equal(43, a + b + c + d);
         }
         [Fact]
@@ -827,8 +846,8 @@ namespace w3resource
             int a = 2;
             int b = 4;
 
-/*             Console.WriteLine(b / a);
- */
+            /*             Console.WriteLine(b / a);
+             */
             Assert.Equal(2, b / a);
         }
         [Fact]
@@ -837,8 +856,8 @@ namespace w3resource
             int a = 2;
             int b = 4;
 
-/*             Console.WriteLine(a + b);
- */
+            /*             Console.WriteLine(a + b);
+             */
             Assert.Equal(6, a + b);
         }
         [Fact]

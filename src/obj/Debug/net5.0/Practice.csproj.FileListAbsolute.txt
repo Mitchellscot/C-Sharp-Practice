@@ -1,0 +1,16 @@
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/Practice.csprojAssemblyReference.cache
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/Practice.GeneratedMSBuildEditorConfig.editorconfig
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/Practice.AssemblyInfoInputs.cache
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/Practice.AssemblyInfo.cs
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/Practice.csproj.CoreCompileInputs.cache
+/home/mitch/Code/practice/C-Sharp-Practice/src/bin/Debug/net5.0/Practice
+/home/mitch/Code/practice/C-Sharp-Practice/src/bin/Debug/net5.0/Practice.deps.json
+/home/mitch/Code/practice/C-Sharp-Practice/src/bin/Debug/net5.0/Practice.runtimeconfig.json
+/home/mitch/Code/practice/C-Sharp-Practice/src/bin/Debug/net5.0/Practice.runtimeconfig.dev.json
+/home/mitch/Code/practice/C-Sharp-Practice/src/bin/Debug/net5.0/Practice.dll
+/home/mitch/Code/practice/C-Sharp-Practice/src/bin/Debug/net5.0/ref/Practice.dll
+/home/mitch/Code/practice/C-Sharp-Practice/src/bin/Debug/net5.0/Practice.pdb
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/Practice.dll
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/ref/Practice.dll
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/Practice.pdb
+/home/mitch/Code/practice/C-Sharp-Practice/src/obj/Debug/net5.0/Practice.genruntimeconfig.cache

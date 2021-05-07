@@ -12,16 +12,15 @@ namespace Practice
     {
         public static void Main()
         {
-            string str = "-100 2 300 4 5";
-            List<int> answer = new List<int>();
-            var arr = str.Split(' ');
-            for (int i = 0; i < arr.Length; i++)
-            {
-                answer.Add(int.Parse(arr[i]));
-            }
-            int highest = answer.Max();
-            int lowest = answer.Min();
-            WriteLine($"{lowest.ToString()} {highest.ToString()}");
+        long n = 12345;
+        var arr = n.ToString().ToCharArray();
+        Array.Reverse(arr);
+        var answer = arr.Select(x => Convert.ToInt64(Char.GetNumericValue(x))).ToArray();
+        foreach (var item in answer)
+        {
+            WriteLine(item.ToString());
+        }
+        
         }
     }
 }

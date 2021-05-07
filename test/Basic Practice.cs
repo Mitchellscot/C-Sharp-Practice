@@ -18,6 +18,16 @@ namespace w3resource
             // assert
             //Assert.Equal();
         } */
+        [Fact] //Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+        public void Test66()
+        {
+            long n = 12345;
+            var arr = n.ToString().ToCharArray();
+            Array.Reverse(arr);
+            var answer = arr.Select(x => Convert.ToInt64(Char.GetNumericValue(x))).ToArray();
+            long[] answer2 = new long[] {5, 4, 3, 2, 1};
+            Assert.Equal(answer, answer2);
+        }
         [Fact]
         public void Test65()
         {

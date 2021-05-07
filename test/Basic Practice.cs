@@ -18,8 +18,23 @@ namespace w3resource
             // assert
             //Assert.Equal();
         } */
+        [Fact]
+        public void Test65()
+        {
+            string str = "-100 2 300 4 5";
+            List<int> answer = new List<int>();
+            var arr = str.Split(' ');
+            for (int i = 0; i < arr.Length; i++)
+            {
+                answer.Add(int.Parse(arr[i]));
+            }
+            int highest = answer.Max();
+            int lowest = answer.Min();
+            Assert.Equal(300, highest);
+            Assert.Equal(-100, lowest);
+        }
         [Fact]  //given a string of words, return the length of the shortest word(s).
-        public void Test()
+        public void Test64()
         {
             string s = "Mitchell Sarah Henry Lydia Edward Arthur";
             int longest = 10000;

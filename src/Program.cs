@@ -12,20 +12,16 @@ namespace Practice
     {
         public static void Main()
         {
-            WriteLine(IsPangram("The quick brown fox jumps over the lazy dog"));
-
-        }
-        public static bool IsPangram(string str)
-        {
-            var alphabet = "abcdefghijklmnopqrstuvwxyz";
-            foreach (var letter in alphabet)
+            string str = "-100 2 300 4 5";
+            List<int> answer = new List<int>();
+            var arr = str.Split(' ');
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (!str.ToLower().Contains(letter))
-                {
-                    return false;
-                }
+                answer.Add(int.Parse(arr[i]));
             }
-            return true;
+            int highest = answer.Max();
+            int lowest = answer.Min();
+            WriteLine($"{lowest.ToString()} {highest.ToString()}");
         }
     }
 }

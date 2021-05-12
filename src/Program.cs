@@ -12,8 +12,14 @@ namespace Practice
     {
         public static void Main()
         {
-       
-        
+            Console.WriteLine(XO("xXoo"));
+
+        }
+        public static bool XO(string input)
+        {
+            var countx = input.ToLower().Count(x => x == 'x');
+            var counto = input.ToLower().Count(o => o == 'o');
+            return countx != counto ? false : true;
         }
     }
 }

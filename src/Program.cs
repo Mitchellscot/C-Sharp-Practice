@@ -12,15 +12,21 @@ namespace Practice
     {
         public static void Main()
         {
-            Console.WriteLine(XO("xXoo"));
+            int[] arr = { 1, 2, 3, 4, 3, 2, 1 };
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i; j < arr.Length; j++)
+                {
+                    sum += arr[j];
+                    Console.WriteLine(sum);
 
-        }
-        public static bool XO(string input)
-        {
-            var countx = input.ToLower().Count(x => x == 'x');
-            var counto = input.ToLower().Count(o => o == 'o');
-            return countx != counto ? false : true;
-        }
+                }
+
+            }
+        } //take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
+
+
     }
 }
 

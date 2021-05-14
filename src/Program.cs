@@ -13,18 +13,26 @@ namespace Practice
         public static void Main()
         {
             int[] arr = { 1, 2, 3, 4, 3, 2, 1 };
-            int sum = 0;
+
+            Console.WriteLine(findIndex(arr));
+
+        } //take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
+        public static int findIndex(int[] arr)
+        {
+            int answer = -1;
             for (int i = 0; i < arr.Length; i++)
             {
-                for (int j = i; j < arr.Length; j++)
+                int a = i + 1;
+                int[] first = arr[i..];
+                int[] second = arr[..a];
+                if (first.Sum() == second.Sum())
                 {
-                    sum += arr[j];
-                    Console.WriteLine(sum);
-
+                    answer = i;
+                    break;
                 }
-
             }
-        } //take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
+            return answer;
+        }
 
 
     }

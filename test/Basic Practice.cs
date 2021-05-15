@@ -8,7 +8,7 @@ namespace w3resource
 {
     public class BasicPractice
     {
-        /* [Fact] //Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+        /* [Fact]
         public void Test()
         {
             // arrange
@@ -18,6 +18,64 @@ namespace w3resource
             // assert
             //Assert.Equal();
         } */
+        [Fact]
+        public void Test70() //Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+        {
+            Assert.Equal(3, Persistence(39));
+            Assert.Equal(0, Persistence(4));
+            Assert.Equal(2, Persistence(25));
+            Assert.Equal(4, Persistence(999));
+        }
+        public static int Persistence(int n, int count = 1)
+        {
+            var charArray = n.ToString().ToCharArray();
+            if (charArray.Length == 1) return 0;
+            int prod = 1;
+            foreach (var num in charArray)
+            {
+                prod = (int)Char.GetNumericValue(num) * prod;
+            }
+            if (prod.ToString().Length != 1)
+            {
+                count++;
+                return Persistence(prod, count);
+            }
+            else return count;
+        }
+        [Fact]
+        public void Test69() //Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers.
+        {
+            // arrange
+            int[] numbers = { 5, 8, 12, 19, 22 };
+            // act
+            Array.Sort(numbers);
+            int answer = numbers[0] + numbers[1];
+            // assert
+            Assert.Equal(13, answer);
+        }
+        [Fact] //take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
+        public void Test68()
+        {
+            // arrange
+            int[] arr = { 1, 2, 3, 4, 3, 2, 1 };
+
+            // act
+            int answer = -1;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int a = i + 1;
+                int[] first = arr[i..];
+                int[] second = arr[..a];
+                if (first.Sum() == second.Sum())
+                {
+                    answer = i;
+                    break;
+                }
+            }
+
+            // assert
+            Assert.Equal(3, answer);
+        }
         [Fact] //Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
         public void Test67()
         {
@@ -26,7 +84,7 @@ namespace w3resource
             var counto = input.ToLower().Count(o => o == 'o');
             bool answer = countx != counto ? false : true;
             Assert.Equal(true, answer);
-        } 
+        }
         [Fact] //Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
         public void Test66()
         {
@@ -34,7 +92,7 @@ namespace w3resource
             var arr = n.ToString().ToCharArray();
             Array.Reverse(arr);
             var answer = arr.Select(x => Convert.ToInt64(Char.GetNumericValue(x))).ToArray();
-            long[] answer2 = new long[] {5, 4, 3, 2, 1};
+            long[] answer2 = new long[] { 5, 4, 3, 2, 1 };
             Assert.Equal(answer, answer2);
         }
         [Fact]

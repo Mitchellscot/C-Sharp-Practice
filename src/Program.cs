@@ -10,31 +10,26 @@ namespace Practice
 {
     class Program
     {
-        public static void Main()
+        public static void Main() 
         {
-            int[] arr = { 1, 2, 3, 4, 3, 2, 1 };
-
-            Console.WriteLine(findIndex(arr));
-
-        } //take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
-        public static int findIndex(int[] arr)
-        {
-            int answer = -1;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                int a = i + 1;
-                int[] first = arr[i..];
-                int[] second = arr[..a];
-                if (first.Sum() == second.Sum())
-                {
-                    answer = i;
-                    break;
-                }
-            }
-            return answer;
+            Console.WriteLine(Persistence(39));
+            Console.WriteLine(Persistence(999));
+            Console.WriteLine(Persistence(0));
         }
-
-
+        public static int Persistence(int n, int count = 1)
+        {
+            var charArray = n.ToString().ToCharArray();
+            if (charArray.Length == 1) return 0;
+            int prod = 1;
+            foreach(var num in charArray)
+            {
+                prod = (int)Char.GetNumericValue(num) * prod;
+            }
+            if (prod.ToString().Length != 1) {
+                count++;
+                return Persistence(prod, count);}
+            else return count;
+        }
     }
 }
 

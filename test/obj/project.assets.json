@@ -6911,11 +6911,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mitch/Code/practice/C-Sharp-Practice/test/test.csproj",
+      "projectUniqueName": "/home/mitch/Code/C-Sharp-Practice/test/test.csproj",
       "projectName": "test",
-      "projectPath": "/home/mitch/Code/practice/C-Sharp-Practice/test/test.csproj",
+      "projectPath": "/home/mitch/Code/C-Sharp-Practice/test/test.csproj",
       "packagesPath": "/home/mitch/.nuget/packages/",
-      "outputPath": "/home/mitch/Code/practice/C-Sharp-Practice/test/obj/",
+      "outputPath": "/home/mitch/Code/C-Sharp-Practice/test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mitch/.nuget/NuGet/NuGet.Config"

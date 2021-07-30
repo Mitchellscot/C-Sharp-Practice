@@ -8,6 +8,16 @@ namespace edabit
 {
     public class edabit
     {
+        [Fact] //Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
+        public void Test5()
+        { 
+            int[] testArray = {1, -2, 3, -4, 5};
+            Assert.Equal(15, Test5M(testArray));
+        }
+        public static int Test5M(int[] arr)
+        { 
+            return arr.Select(x => Math.Abs(x)).Sum();
+        }
         [Fact] //returns the smaller number of two
         public void Test4()
         {

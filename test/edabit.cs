@@ -8,6 +8,25 @@ namespace edabit
 {
     public class edabit
     {
+        [Fact] //Create a function that computes the number of characters that differ between two strings.
+        public void test6()
+        {
+            Assert.Equal(0, Test6M("abcde", "abcde"));
+            Assert.Equal(1, Test6M("abcde", "absde"));
+            Assert.Equal(2, Test6M("abmcdz", "abmsdq"));
+            Assert.Equal(5, Test6M("abcde", "bcdef"));
+        }
+        public static int Test6M(string a, string b)
+        {
+            int count = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if(a[i] != b[i]){
+                    count ++;
+                }
+            }
+            return count;
+        }
         [Fact] //Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
         public void Test5()
         { 

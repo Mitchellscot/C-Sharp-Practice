@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/e/Code/C-Sharp-Practice/test/test.csproj": {}
+    "/home/mitch/Code/C-Sharp-Practice/test/test.csproj": {}
   },
   "projects": {
-    "/mnt/e/Code/C-Sharp-Practice/test/test.csproj": {
+    "/home/mitch/Code/C-Sharp-Practice/test/test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/e/Code/C-Sharp-Practice/test/test.csproj",
+        "projectUniqueName": "/home/mitch/Code/C-Sharp-Practice/test/test.csproj",
         "projectName": "test",
-        "projectPath": "/mnt/e/Code/C-Sharp-Practice/test/test.csproj",
+        "projectPath": "/home/mitch/Code/C-Sharp-Practice/test/test.csproj",
         "packagesPath": "/home/mitch/.nuget/packages/",
-        "outputPath": "/mnt/e/Code/C-Sharp-Practice/test/obj/",
+        "outputPath": "/home/mitch/Code/C-Sharp-Practice/test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mitch/.nuget/NuGet/NuGet.Config"
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

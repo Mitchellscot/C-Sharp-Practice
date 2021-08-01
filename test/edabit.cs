@@ -7,14 +7,15 @@ using System.Collections.Generic;
 namespace edabit
 {
     public class edabit
-    {
-        [Fact] //Create a function that computes the number of characters that differ between two strings.
-        public void test6()
+    {   
+        //Create a function that computes the number of characters that differ between two strings. 
+        [Fact]
+        public void Test6()
         {
-            Assert.Equal(0, Test6M("abcde", "abcde"));
-            Assert.Equal(1, Test6M("abcde", "absde"));
-            Assert.Equal(2, Test6M("abmcdz", "abmsdq"));
-            Assert.Equal(5, Test6M("abcde", "bcdef"));
+            Assert.Equal(0, Test6Mb("abcde", "abcde"));
+            Assert.Equal(1, Test6Mb("abcde", "absde"));
+            Assert.Equal(2, Test6Mb("abmcdz", "abmsdq"));
+            Assert.Equal(5, Test6Mb("abcde", "bcdef"));
         }
         public static int Test6M(string a, string b)
         {
@@ -27,7 +28,13 @@ namespace edabit
             }
             return count;
         }
-        [Fact] //Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
+        //linq version
+        public static int Test6Mb(string a, string b)
+        {
+            return a.Where((t, x) => t != b[x]).Count();
+        }
+        //Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
+        [Fact]
         public void Test5()
         { 
             int[] testArray = {1, -2, 3, -4, 5};
@@ -93,7 +100,6 @@ namespace edabit
 
         public static bool Test2Ma(string s)
         {
-            //first attempt
             for (int i = 0; i < s.Length; i++)
             {
                 if (s[0] != s[i]){  return false; }
@@ -102,7 +108,6 @@ namespace edabit
         }
         public static bool Test2Mb(string s)
         {
-            //with linq checking every one for a given condition
             return s.All(x => x == s[0]);
         }
         public static bool Test2Mc(string s)

@@ -3,11 +3,126 @@ using Xunit;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
+using System.Text;
 
 namespace edabit
 {
     public class edabit
     {   
+/*      /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static int Method()
+        {
+
+        }
+
+        [Fact]
+        public void Test()
+        {
+
+        } */
+
+        /// <summary>
+        /// Takes a string and returns a string in which each character is repeated once.
+        /// </summary>
+        /// <returns></returns>
+        public static string Method13(string s)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < s.Length; i++)
+            {
+                sb.Append(s[i]);
+                sb.Append(s[i]);
+            }
+            return sb.ToString();
+        }
+            
+        public static string Method13b(string s) => string.Concat(s.Select(c => $"{c}{c}"));
+
+        [Fact]
+        public void Test13()
+        {
+            Assert.Equal("SSttrriinngg", Method13("String"));
+            Assert.Equal("HHeelllloo  WWoorrlldd!!", Method13("Hello World!"));
+            Assert.Equal("11223344!!__  ", Method13b("1234!_ "));
+        }
+
+        /// <summary>
+        /// Takes a number as an argument and returns "Fizz", "Buzz" or "FizzBuzz".
+        /// </summary>
+        /// <returns></returns>
+        public static string Method12(int n)
+        {
+            if(n % 3  == 0 && n % 5 == 0)
+            {return "FizzBuzz";}
+            else if(n % 3 == 0)
+            {return "Fizz";}
+            else if (n % 5 == 0)
+            {return "Buzz";}
+            else return n.ToString();
+        }
+
+        [Fact]
+        public void Test12()
+        {
+            Assert.Equal("Fizz", Method12(3));
+            Assert.Equal("Buzz", Method12(5));
+            Assert.Equal("FizzBuzz", Method12(15));
+            Assert.Equal("4", Method12(4));
+        } 
+
+        /// <summary>
+        /// Create a function that converts a date formatted as MM/DD/YYYY to YYYYDDMM.
+        /// </summary>
+        /// <returns>A String</returns>
+        public static string Method11(string d)
+        {
+            var s = d.Split('/');
+            return s[2] + s[1] + s[0];
+        }
+
+        public static string Method11b(string d) => String.Join("",d.Split('/').Reverse());
+
+        public static string Method11c(string d) => Convert.ToDateTime(d).ToString("yyyyddMM");
+
+        [Fact]
+        public void Test11()
+        {
+            Assert.Equal("20191211", Method11("11/12/2019"));
+            Assert.Equal("20193112", Method11b("12/31/2019"));
+            Assert.Equal("20191501", Method11c("01/15/2019"));
+        }
+
+        /// <summary>
+        /// Removes the first and last characters from a string.
+        /// </summary>
+        /// <returns>If the string is 2 or fewer characters long, return the string itself.</returns>
+        public static string Method10(string s)
+        {
+            if(s.Length < 3){
+                return s;
+            }
+            string answer = string.Empty;
+            for (int i = 1; i < s.Length -1; i++)
+            {
+                answer += s[i];
+            }
+            return answer;
+        }
+
+        public static string Method10b(string s) => s.Length <= 2 ? s : s.Substring(1, s.Length - 2);
+
+        [Fact]
+        public void Test10()
+        {
+            Assert.Equal("ell", Method10("Hello"));
+            Assert.Equal("ayb", Method10("Maybe"));
+            Assert.Equal("enefi", Method10b("Benefit"));
+            Assert.Equal("a", Method10("a"));
+        }
+
         /// <summary>
         /// Counts how many D's are in a sentence
         /// </summary>
@@ -75,12 +190,6 @@ namespace edabit
             return count;
         }
 
-        /// <summary>
-        /// Computes the number of characters that differ between two string - Linq version
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
         public static int Method6b(string a, string b) => a.Where((t, x) => t != b[x]).Count();
 
         [Fact]
@@ -124,12 +233,6 @@ namespace edabit
             else return "nope";
         }
 
-        /// <summary>
-        /// Returns the smaller of two strings
-        /// </summary>
-        /// <param name="n1"></param>
-        /// <param name="n2"></param>
-        /// <returns></returns>
         public static string Method4b(string n1, string n2) => Int32.Parse(n1) > Int32.Parse(n2) ? n2 : n1;
 
         [Fact]
@@ -153,11 +256,7 @@ namespace edabit
             answer[1] = arr.Max();
             return answer;
         }
-        /// <summary>
-        /// Takes an array of numbers and return both the minimum and maximum numbers - with anonymous function
-        /// </summary>
-        /// <param name="arr"></param>
-        /// <returns></returns>
+
         public static int[] Method3b(int[] arr) => new[] {arr.Min(), arr.Max()};
         
         [Fact]
@@ -188,18 +287,8 @@ namespace edabit
             return true;
         }
 
-        /// <summary>
-        /// Returns true if all characters in a string are identical - Linq version 1
-        /// </summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
         public static bool Method2b(string s) => s.All(x => x == s[0]);
 
-        /// <summary>
-        /// Returns true if all characters in a string are identical - Linq version 2
-        /// </summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
         public static bool Method2c(string s) => s.Distinct().Count() == 1;
 
         [Fact]

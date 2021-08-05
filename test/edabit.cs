@@ -4,8 +4,9 @@ using System.Linq;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using System.Diagnostics;
 
-namespace edabit
+namespace Tests
 {
     public class edabit
     {   
@@ -16,13 +17,27 @@ namespace edabit
         public static int Method()
         {
 
+        }*/
+
+        /// <summary>
+        /// Takes a string and returns the number (count) of vowels contained within it.
+        /// </summary>
+        /// <returns></returns>
+        public static int Method14(string s)
+        {
+            char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+            int count = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (vowels.Any(x => x == s[i]))
+                {
+                    count ++;
+                }
+            }
+            return count;
         }
 
-        [Fact]
-        public void Test()
-        {
-
-        } */
+        public static int Method14b(string s) => s.Count(a => $"aeiouAEIOU".Contains(a));
 
         /// <summary>
         /// Takes a string and returns a string in which each character is repeated once.
@@ -41,14 +56,6 @@ namespace edabit
             
         public static string Method13b(string s) => string.Concat(s.Select(c => $"{c}{c}"));
 
-        [Fact]
-        public void Test13()
-        {
-            Assert.Equal("SSttrriinngg", Method13("String"));
-            Assert.Equal("HHeelllloo  WWoorrlldd!!", Method13("Hello World!"));
-            Assert.Equal("11223344!!__  ", Method13b("1234!_ "));
-        }
-
         /// <summary>
         /// Takes a number as an argument and returns "Fizz", "Buzz" or "FizzBuzz".
         /// </summary>
@@ -64,15 +71,6 @@ namespace edabit
             else return n.ToString();
         }
 
-        [Fact]
-        public void Test12()
-        {
-            Assert.Equal("Fizz", Method12(3));
-            Assert.Equal("Buzz", Method12(5));
-            Assert.Equal("FizzBuzz", Method12(15));
-            Assert.Equal("4", Method12(4));
-        } 
-
         /// <summary>
         /// Create a function that converts a date formatted as MM/DD/YYYY to YYYYDDMM.
         /// </summary>
@@ -86,14 +84,6 @@ namespace edabit
         public static string Method11b(string d) => String.Join("",d.Split('/').Reverse());
 
         public static string Method11c(string d) => Convert.ToDateTime(d).ToString("yyyyddMM");
-
-        [Fact]
-        public void Test11()
-        {
-            Assert.Equal("20191211", Method11("11/12/2019"));
-            Assert.Equal("20193112", Method11b("12/31/2019"));
-            Assert.Equal("20191501", Method11c("01/15/2019"));
-        }
 
         /// <summary>
         /// Removes the first and last characters from a string.
@@ -114,15 +104,6 @@ namespace edabit
 
         public static string Method10b(string s) => s.Length <= 2 ? s : s.Substring(1, s.Length - 2);
 
-        [Fact]
-        public void Test10()
-        {
-            Assert.Equal("ell", Method10("Hello"));
-            Assert.Equal("ayb", Method10("Maybe"));
-            Assert.Equal("enefi", Method10b("Benefit"));
-            Assert.Equal("a", Method10("a"));
-        }
-
         /// <summary>
         /// Counts how many D's are in a sentence
         /// </summary>
@@ -130,13 +111,6 @@ namespace edabit
         /// <returns></returns>
         public static int Method9(string s) => s.Count(x => x == 'D' || x =='d');
 
-        [Fact]
-        public void Test9()
-        {
-            Assert.Equal(4, Method9("My friend Dylan got distracted in school."));
-            Assert.Equal(3, Method9("Debris was scattered all over the yard."));
-            Assert.Equal(3, Method9("The rodents hibernated in their den."));
-        }
         /// <summary>
         /// Returns true if an input string contains only uppercase or only lowercase letters.
         /// </summary>
@@ -147,14 +121,6 @@ namespace edabit
             return s.All(x => Char.IsUpper(x)) || s.All(x => Char.IsLower(x)) ? true : false;
         }
 
-        [Fact]
-        public void Test8()
-        {
-            Assert.True(Method8("hello"));
-            Assert.True(Method8("HELLO"));
-            Assert.False(Method8("Hello"));
-            Assert.False(Method8("ketcHUp"));
-        }
         /// <summary>
         /// Return how many claps are in a sentance
         /// </summary>
@@ -165,13 +131,6 @@ namespace edabit
             return claps.Count(c => c == 'C');
         }
 
-        [Fact]
-        public void Test7()
-        {
-            Assert.Equal(4, Method7("ClaClaClaClap!"));
-            Assert.Equal(6, Method7("ClClClaClaClaClap!"));
-            Assert.Equal(9, Method7("CCClaClClap!Clap!ClClClap!"));
-        }
         /// <summary>
         /// Computes the number of characters that differ between two strings.
         /// </summary>
@@ -192,15 +151,6 @@ namespace edabit
 
         public static int Method6b(string a, string b) => a.Where((t, x) => t != b[x]).Count();
 
-        [Fact]
-        public void Test6()
-        {
-            Assert.Equal(0, Method6("abcde", "abcde"));
-            Assert.Equal(1, Method6("abcde", "absde"));
-            Assert.Equal(2, Method6b("abmcdz", "abmsdq"));
-            Assert.Equal(5, Method6b("abcde", "bcdef"));
-        }
-
         /// <summary>
         /// Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
         /// </summary>
@@ -209,13 +159,6 @@ namespace edabit
         public static int Method5(int[] arr)
         { 
             return arr.Select(x => Math.Abs(x)).Sum();
-        }
-
-        [Fact]
-        public void Test5()
-        { 
-            int[] testArray = {1, -2, 3, -4, 5};
-            Assert.Equal(15, Method5(testArray));
         }
 
         /// <summary>
@@ -234,15 +177,6 @@ namespace edabit
         }
 
         public static string Method4b(string n1, string n2) => Int32.Parse(n1) > Int32.Parse(n2) ? n2 : n1;
-
-        [Fact]
-        public void Test4()
-        {
-            Assert.Equal("5", Method4("5", "6"));
-            Assert.Equal("5", Method4("6", "5"));
-            Assert.Equal("9078", Method4b("107838", "9078"));
-            Assert.Equal("9078", Method4b("107838", "9078"));
-        }
         
         /// <summary>
         /// Takes an array of numbers and return both the minimum and maximum numbers
@@ -258,17 +192,6 @@ namespace edabit
         }
 
         public static int[] Method3b(int[] arr) => new[] {arr.Min(), arr.Max()};
-        
-        [Fact]
-        public void Test3()
-        {
-            int[] a = {1, 50};
-            int[] b = {6, 1, 45, 50};
-            Assert.Equal(a, Method3(b));
-            int[] c = {-99, 209};
-            int[] d = {3, 54, -99, 209, 34, 75, -3, -45};
-            Assert.Equal(c, Method3b(d));
-        }
 
         /// <summary>
         /// Returns true if all characters in a string are identical
@@ -290,16 +213,6 @@ namespace edabit
         public static bool Method2b(string s) => s.All(x => x == s[0]);
 
         public static bool Method2c(string s) => s.Distinct().Count() == 1;
-
-        [Fact]
-        public void Test2()
-        {
-            Assert.True(Method2("aaaaa"));
-            Assert.False(Method2b("aaabaaa"));
-            Assert.False(Method2c("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmn"));
-            Assert.False(Method2c("nmmmmmmmmm"));
-            Assert.True(Method2c("z"));
-        }
 
         /// <summary>
         /// Takes a number (from 1 to 12) and returns its corresponding month name as a string
@@ -324,15 +237,6 @@ namespace edabit
                     12 => "December",
                     _ => "Not on the Calendar"
                 };            
-        }
-
-        [Fact]
-        public void Test1()
-        {
-            Assert.Equal("April", Method1(4));
-            Assert.Equal("November", Method1(11));
-            Assert.Equal("December", Method1(12));
-            Assert.Equal("Not on the Calendar", Method1(13));
         }
     }
 }

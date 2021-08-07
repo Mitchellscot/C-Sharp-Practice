@@ -10,11 +10,19 @@ namespace Tests
     public class Tests
     {   
 
-    /*    [Fact]
+/*         [Fact]
         public void Test()
         {
 
         } */
+
+        [Fact]
+        public void Test15()
+        {
+            Assert.Equal(3125, edabit.Method15(5, 5));
+            Assert.Equal(10000000000, edabit.Method15(10, 10));
+            Assert.Equal(27, edabit.Method15(3, 3));
+        }
 
         [Fact]
         public void Test14()
@@ -23,7 +31,6 @@ namespace Tests
             Assert.Equal(1, edabit.Method14("Palm"));
             Assert.Equal(4, edabit.Method14("Prediction"));
             Assert.Equal(3, edabit.Method14b("Mitchell Scott"));
-
         }
 
         [Fact]

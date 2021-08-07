@@ -20,6 +20,15 @@ namespace Tests
         }*/
 
         /// <summary>
+        /// takes a base number and an exponent number and returns the calculation.
+        /// </summary>
+        /// <returns></returns>
+        public static long Method15(long n, long x)
+        {
+            return Convert.ToInt64(Math.Pow(n, x));
+        }
+
+        /// <summary>
         /// Takes a string and returns the number (count) of vowels contained within it.
         /// </summary>
         /// <returns></returns>
@@ -118,7 +127,7 @@ namespace Tests
         /// <returns></returns>
         public static bool Method8(string s)
         {
-            return s.All(x => Char.IsUpper(x)) || s.All(x => Char.IsLower(x)) ? true : false;
+            return s.All(x => Char.IsUpper(x)) || s.All(x => Char.IsLower(x));
         }
 
         /// <summary>

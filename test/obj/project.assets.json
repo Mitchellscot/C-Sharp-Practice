@@ -6906,24 +6906,26 @@
     ]
   },
   "packageFolders": {
-    "/home/mitch/.nuget/packages/": {}
+    "C:\\Users\\Mitch\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mitch/Code/C-Sharp-Practice/test/test.csproj",
+      "projectUniqueName": "C:\\Users\\Mitch\\Code\\C-Sharp-Practice\\test\\test.csproj",
       "projectName": "test",
-      "projectPath": "/home/mitch/Code/C-Sharp-Practice/test/test.csproj",
-      "packagesPath": "/home/mitch/.nuget/packages/",
-      "outputPath": "/home/mitch/Code/C-Sharp-Practice/test/obj/",
+      "projectPath": "C:\\Users\\Mitch\\Code\\C-Sharp-Practice\\test\\test.csproj",
+      "packagesPath": "C:\\Users\\Mitch\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mitch\\Code\\C-Sharp-Practice\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mitch/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Mitch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6974,7 +6976,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

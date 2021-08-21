@@ -20,6 +20,15 @@ namespace Tests
         }*/
 
         /// <summary>
+        /// Multiplies all of the values in an array by the amount of values in the given array.
+        /// </summary>
+        /// <returns></returns>
+        public static int[] Method16(int[] arr)
+        {
+            return arr.Select(x => x * arr.Length).ToArray();
+        }
+
+        /// <summary>
         /// takes a base number and an exponent number and returns the calculation.
         /// </summary>
         /// <returns></returns>

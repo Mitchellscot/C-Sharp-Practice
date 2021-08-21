@@ -17,6 +17,23 @@ namespace Tests
         } */
 
         [Fact]
+        public void Test16()
+        {
+            int[] actual1 = new int[4] {2, 3, 1, 0};
+            int[] expected1 = new int[4] {8, 12, 4, 0};
+            Assert.Equal(expected1, edabit.Method16(actual1));
+            int[] actual2 = new int[3] {4, 1, 1};
+            int[] expected2 = new int[3] {12,3,3};
+            Assert.Equal(expected2, edabit.Method16(actual2));
+            int[] actual3 = new int[7] {1, 0, 3, 3, 7, 2, 1};
+            int[] expected3 = new int[7] {7, 0, 21, 21, 49, 14, 7};
+            Assert.Equal(expected3, edabit.Method16(actual3));
+            int[] actual4 = new int[1] {0};
+            int[] expected4 = new int[1] {0};
+            Assert.Equal(expected4, edabit.Method16(actual4));
+        } 
+
+        [Fact]
         public void Test15()
         {
             Assert.Equal(3125, edabit.Method15(5, 5));

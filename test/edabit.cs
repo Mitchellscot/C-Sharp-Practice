@@ -20,6 +20,28 @@ namespace Tests
         }*/
 
         /// <summary>
+        /// Returns the selected filename from a path. Include the extension in your answer.
+        /// </summary>
+        /// <returns></returns>
+        public static string Method18(string path)
+        {
+            //return path.Split('/').Last();
+            return Path.GetFileName(path);
+        }
+
+        /// <summary>
+        ///  Takes an integer and returns the factorial of that integer. That is, the integer multiplied by all positive lower integers.
+        /// </summary>
+        /// <returns></returns>
+        public static long Method17(long n) => n == 1 ? 1 : n * Method17(n - 1);
+        public static long Method17b(long n)
+        {
+            if (n < 1) return 0;
+            if (n == 1) return 1;
+            return n * Method17b(n - 1);
+        }
+
+        /// <summary>
         /// Multiplies all of the values in an array by the amount of values in the given array.
         /// </summary>
         /// <returns></returns>

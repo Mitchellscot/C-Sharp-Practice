@@ -17,6 +17,25 @@ namespace Tests
         } */
 
         [Fact]
+        public void Test18()
+        {
+            Assert.Equal("edabit.txt", edabit.Method18("C:/Projects/pil_tests/ascii/edabit.txt"));
+            Assert.Equal("Beethoven_5.mp3", edabit.Method18("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
+            Assert.Equal("ffprobe.exe", edabit.Method18("ffprobe.exe"));
+
+        }
+
+        [Fact]
+        public void Test17()
+        {
+            Assert.Equal(6, edabit.Method17(3));
+            Assert.Equal(120, edabit.Method17(5));
+            Assert.Equal(6227020800, edabit.Method17(13));
+            Assert.Equal(0, edabit.Method17b(-5));
+
+        }
+
+        [Fact]
         public void Test16()
         {
             int[] actual1 = new int[4] {2, 3, 1, 0};

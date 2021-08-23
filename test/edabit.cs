@@ -36,8 +36,9 @@ namespace Tests
         /// <returns></returns>
         public static string Method19(string s, int n)
         {
-            string answer = "";
-            return answer;
+            if (n == 1) return s;
+
+            return s + Method19(s, n-1);
         }
 
         /// <summary>

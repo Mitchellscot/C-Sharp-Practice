@@ -77,6 +77,7 @@ namespace Tests
         //    var expected = "";
         //    Assert.Equal(expected, Method20(actual));
         //} 
+        [Fact]
         public void Test19()
         {
             var actual = "ab";
@@ -89,7 +90,7 @@ namespace Tests
             Assert.Equal(expected2, Method19(actual2, actualNum2));
             var actual3 = "cherry";
             var actualNum3 = 4;
-            var expected3 = "cherrycherry";
+            var expected3 = "cherrycherrycherrycherry";
             Assert.Equal(expected3, Method19(actual3, actualNum3));
         }
 

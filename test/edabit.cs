@@ -21,23 +21,62 @@ namespace Tests
 
         }*/
 
-        /// <summary>
-        /// 
+         /// <summary>
+        /// Take an array and return an array with the same numbers sorted from lowest to highest
         /// </summary>
         /// <returns></returns>
-        public static int Method20()
+        public static int[] Method22(int[] arr)
         {
-            return 0;
+            if (arr.Count() == 0) return Array.Empty<int>();
+            return arr.OrderBy(x => x).ToArray();
         }
 
         /// <summary>
-        /// 
+        /// Takes a number and returns the name of a shape with that many sides.
+        /// </summary>
+        /// <returns></returns>
+        public static string Method21(int num)
+        {
+            return num switch
+                {
+                    1 => "circle",
+                    2 => "semi-circle",
+                    3 => "triangle",
+                    4 => "square",
+                    5 => "pentagon",
+                    6 => "hexagon",
+                    7 => "heptagon",
+                    8 => "octagon",
+                    9 => "nonagon",
+                    10 => "decagon",
+                    _ => "Not a shape."
+                }; 
+        }
+
+        /// <summary>
+        /// Takes a string and returns it in reverse
+        /// </summary>
+        /// <returns></returns>
+        public static string Method20(string s)
+        {
+            var sb = new StringBuilder();
+            var answer = s.ToArray().Reverse();
+            foreach (var c in answer)
+            {
+                sb.Append(c);
+            }
+            return sb.ToString();
+        }
+        public static string Method20b(string s) => string.Concat(s.Reverse());
+
+
+        /// <summary>
+        /// Takes a string and a number and returns a string repeated n number of times
         /// </summary>
         /// <returns></returns>
         public static string Method19(string s, int n)
         {
             if (n == 1) return s;
-
             return s + Method19(s, n-1);
         }
 

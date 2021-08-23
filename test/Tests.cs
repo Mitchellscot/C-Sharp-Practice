@@ -9,7 +9,7 @@ using static Tests.edabit;
 namespace Tests
 {
     public class Tests
-    {   
+    {
 
         //public void Test30()
         //{
@@ -59,24 +59,46 @@ namespace Tests
         //    var expected = "";
         //    Assert.Equal(expected, Method23(actual));
         //} 
-        //public void Test22()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method22(actual));
-        //} */
-        //public void Test21()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method21(actual));
-        //} 
-        //public void Test20()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method20(actual));
-        //} 
+        [Fact]
+        public void Test22()
+        {
+            var actual = new int[] { 1, 2, 10, 50, 5 };
+            var expected = new int[] { 1, 2, 5, 10, 50 };
+            Assert.Equal(expected, Method22(actual));
+            var actual2 = new int[] { 80, 29, 4, -95, -24, 85 };
+            var expected2 = new int[] { -95, -24, 4, 29, 80, 85 };
+            Assert.Equal(expected2, Method22(actual2));
+            var actual3 = Array.Empty<int>();
+            var expected3 = Array.Empty<int>();
+            Assert.Equal(expected3, Method22(actual3));
+        }
+        [Fact]
+        public void Test21()
+        {
+            var actual = 3;
+            var expected = "triangle";
+            Assert.Equal(expected, Method21(actual));
+            var actual2 = 1;
+            var expected2 = "circle";
+            Assert.Equal(expected2, Method21(actual2));
+            var actual3 = 9;
+            var expected3 = "nonagon";
+            Assert.Equal(expected3, Method21(actual3));
+        }
+
+        [Fact]
+        public void Test20()
+        {
+            var actual = "Hello World";
+            var expected = "dlroW olleH";
+            Assert.Equal(expected, Method20(actual));
+            var actual2 = "The quick brown fox.";
+            var expected2 = ".xof nworb kciuq ehT";
+            Assert.Equal(expected2, Method20(actual2));
+            var actual3 = "Edabit is really helpful!";
+            var expected3 = "!lufpleh yllaer si tibadE";
+            Assert.Equal(expected3, Method20b(actual3));
+        }
         [Fact]
         public void Test19()
         {

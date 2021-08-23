@@ -73,7 +73,7 @@ namespace w3resource
             var countx = input.ToLower().Count(x => x == 'x');
             var counto = input.ToLower().Count(o => o == 'o');
             bool answer = countx != counto ? false : true;
-            Assert.Equal(true, answer);
+            Assert.True(answer);
         }
         [Fact] //Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
         public void Test66()

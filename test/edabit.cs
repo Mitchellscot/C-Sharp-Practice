@@ -21,6 +21,31 @@ namespace Tests
 
         }*/
 
+        /// <summary>
+        /// Takes an array of numbers and returns only the even values
+        /// </summary>
+        /// <returns></returns>
+        public static int[] Method24b(int[] arr)
+        {
+            var answer = new List<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 0)
+                { answer.Add(arr[i]); }
+            }
+            return answer.ToArray();
+        }
+        public static int[] Method24(int[] arr) => arr.Where(x => x % 2 == 0).ToArray();
+
+        /// <summary>
+        /// Takes in two numbers and returns the percentage of the first over the second
+        /// </summary>
+        /// <returns></returns>
+        public static string Method23(int a, int b)
+        {
+            return Math.Ceiling(100M * a / b).ToString() + "%";
+        }
+
          /// <summary>
         /// Take an array and return an array with the same numbers sorted from lowest to highest
         /// </summary>

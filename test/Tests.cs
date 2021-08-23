@@ -47,18 +47,35 @@ namespace Tests
         //    var expected = "";
         //    Assert.Equal(expected, Method25(actual));
         //} 
-        //public void Test24()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method24(actual));
-        //} 
-        //public void Test23()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method23(actual));
-        //} 
+        [Fact]
+        public void Test24()
+        {
+            var actual = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+            var expected = new int[]{2, 4, 6, 8};
+            Assert.Equal(expected, Method24(actual));
+            var actual1 = new int[] { 43, 65, 23, 89, 53, 9, 6 };
+            var expected1 = new int[] { 6 };
+            Assert.Equal(expected1, Method24(actual1));
+            var actual2 = new int[] {718, 991, 449, 644, 380, 440};
+            var expected2 = new int[] { 718, 644, 380, 440 };
+            Assert.Equal(expected2, Method24(actual2));
+        }
+        [Fact]
+        public void Test23()
+        {
+            var actuala = 1;
+            var actualb = 10;
+            var expected = "10%";
+            Assert.Equal(expected, Method23(actuala, actualb));
+            var actual1a = 2;
+            var actual1b = 5;
+            var expected1 = "40%";
+            Assert.Equal(expected1, Method23(actual1a, actual1b));
+            var actual2a = 1;
+            var actual2b = 8;
+            var expected2 = "13%";
+            Assert.Equal(expected2, Method23(actual2a, actual2b));
+        }
         [Fact]
         public void Test22()
         {

@@ -21,6 +21,17 @@ namespace Tests
 
         }*/
 
+
+        /// <summary>
+        /// Returns the number of hashes and pluses in a string
+        /// </summary>
+        /// <returns></returns>
+        public static int[] Method25(string s)
+        {
+            if (s == "") return new[] { 0, 0 };
+            return new[] { s.ToCharArray().Count(x => x == '#'), s.ToCharArray().Count(y => y == '+') };
+        }
+
         /// <summary>
         /// Takes an array of numbers and returns only the even values
         /// </summary>

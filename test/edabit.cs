@@ -6,11 +6,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
+
 namespace Tests
 {
     public class edabit
-    {   
-/*      /// <summary>
+    {
+
+        /*      /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
@@ -20,14 +22,33 @@ namespace Tests
         }*/
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static int Method20()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static string Method19(string s, int n)
+        {
+            string answer = "";
+            return answer;
+        }
+
+        /// <summary>
         /// Returns the selected filename from a path. Include the extension in your answer.
         /// </summary>
         /// <returns></returns>
         public static string Method18(string path)
         {
-            //return path.Split('/').Last();
-            return Path.GetFileName(path);
+            return path.Split('/').Last();
         }
+        public static string Method18b(string path) => Path.GetFileName(path);
 
         /// <summary>
         ///  Takes an integer and returns the factorial of that integer. That is, the integer multiplied by all positive lower integers.

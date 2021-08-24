@@ -12,15 +12,66 @@ namespace Tests
     public class edabit
     {
 
-        /*      /// <summary>
-        /// 
+        /// <summary>
+        /// Takes a string, checks if it has the same number of x's and o's and returns either true or false.
         /// </summary>
         /// <returns></returns>
-        public static int Method()
+        public static bool Method31(string s)
         {
+            if (s.Contains("x") && s.Contains("o"))
+            {
+                return s.ToLower().Count(x => x == 'o') == s.ToLower().Count(y => y == 'x');
+            }
+            else return true;
+        }
 
-        }*/
+        /// <summary>
+        /// Takes an array of strings and returns the words that are exactly four letters.
+        /// </summary>
+        /// <returns></returns>
+        public static string[] Method30(string[] arr)
+        {
+            return arr.Where(x => x.Length == 4).ToArray();
+        }
 
+        /// <summary>
+        /// returns the next number greater than a and b and divisible by b. A will always be greater than b.
+        /// </summary>
+        /// <returns></returns>
+        public static int Method29b(int a, int b)
+        {
+            int c = a;
+            while (c % b != 0)
+            {
+                c++;
+            }
+            return c;
+        }
+        public static int Method29(int a, int b) => a % b == 0 ? a : Method29(a + 1, b);
+
+        /// <summary>
+        /// Recursively finds the sum of the first n natural numbers.
+        /// </summary>
+        /// <returns></returns>
+        public static int Method28(int n) => n == 1 ? 1 : n + Method28(n - 1);
+
+        /// <summary>
+        /// Takes a number and returns that given number of Rs in the word Burp
+        /// </summary>
+        /// <returns></returns>
+        public static string Method27(int n)
+        {
+            return "Bu" + String.Concat(Enumerable.Repeat("r", n)) + "p";
+        }
+
+        /// <summary>
+        ///  Takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string.
+        /// </summary>
+        /// <returns>In order to work properly, the function should replace all "a"s with 4, "e"s with 3, "i"s with 1, "o"s with 0, and "s"s with 5.</returns>
+        public static string Method26(string s)
+        {
+            return s.Replace('a', '4').Replace('e', '3').Replace('i', '1').Replace('o', '0').Replace('s', '5');
+        }
 
         /// <summary>
         /// Returns the number of hashes and pluses in a string

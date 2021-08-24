@@ -10,37 +10,140 @@ namespace Tests
 {
     public class Tests
     {
-
-        //public void Test30()
+        //public void Test40()
         //{
         //    var actual = "";
         //    var expected = "";
-        //    Assert.Equal(expected, Method30(actual));
+        //    Assert.Equal(expected, Method40(actual));
         //} 
-        //public void Test29()
+        //public void Test39()
         //{
         //    var actual = "";
         //    var expected = "";
-        //    Assert.Equal(expected, Method29(actual));
+        //    Assert.Equal(expected, Method39(actual));
         //} 
-        //public void Test28()
+        //public void Test38()
         //{
         //    var actual = "";
         //    var expected = "";
-        //    Assert.Equal(expected, Method28(actual));
+        //    Assert.Equal(expected, Method38(actual));
         //} 
-        //public void Test27()
+        //public void Test37()
         //{
         //    var actual = "";
         //    var expected = "";
-        //    Assert.Equal(expected, Method27(actual));
+        //    Assert.Equal(expected, Method37(actual));
         //} 
-        //public void Test26()
+        //public void Test36()
         //{
         //    var actual = "";
         //    var expected = "";
-        //    Assert.Equal(expected, Method26(actual));
+        //    Assert.Equal(expected, Method36(actual));
         //} 
+        //public void Test35()
+        //{
+        //    var actual = "";
+        //    var expected = "";
+        //    Assert.Equal(expected, Method35(actual));
+        //} 
+        //public void Test34()
+        //{
+        //    var actual = "";
+        //    var expected = "";
+        //    Assert.Equal(expected, Method34(actual));
+        //} 
+        //public void Test33()
+        //{
+        //    var actual = "";
+        //    var expected = "";
+        //    Assert.Equal(expected, Method33(actual));
+        //} */
+        //public void Test32()
+        //{
+        //    var actual = "";
+        //    var expected = "";
+        //    Assert.Equal(expected, Method32(actual));
+        //} 
+        [Fact]
+        public void Test31()
+        {
+            var actual = "ooxx";
+            Assert.True(Method31(actual));
+            var actual1 = "xooxx";
+            Assert.False(Method31(actual1));
+            var actual2 = "ooxXm";
+            Assert.True(Method31(actual2));
+            var actual3 = "zpzpzpp";
+            Assert.True(Method31(actual3));
+        }
+        [Fact]
+        public void Test30()
+        {
+            var actual = new[] { "Tomato", "Potato", "Pair" };
+            var expected = new[] {"Pair" };
+            Assert.Equal(expected, Method30(actual));
+            var actual1 = new[] {"Kangaroo", "Bear", "Fox" };
+            var expected1 = new[] {"Bear" };
+            Assert.Equal(expected1, Method30(actual1));
+            var actual2 = new[] { "Ryan", "Kieran", "Jason", "Matt" };
+            var expected2 = new[] { "Ryan", "Matt" };
+            Assert.Equal(expected2, Method30(actual2));
+        }
+        [Fact]
+        public void Test29()
+        {
+            var actual = 17;
+            var actualb = 8;
+            var expected = 24;
+            Assert.Equal(expected, Method29(actual, actualb));
+            var actual1 = 98;
+            var actualb1 = 3;
+            var expected1 = 99;
+            Assert.Equal(expected1, Method29(actual1, actualb1));
+            var actual2 = 14;
+            var actualb2 = 11;
+            var expected2 = 22;
+            Assert.Equal(expected2, Method29(actual2, actualb2));
+        }
+        [Fact]
+        public void Test28()
+        {
+            var actual = 5;
+            var expected = 15;
+            Assert.Equal(expected, Method28(actual));
+            var actual2 = 1;
+            var expected2 = 1;
+            Assert.Equal(expected2, Method28(actual2));
+            var actual3 = 12;
+            var expected3 = 78;
+            Assert.Equal(expected3, Method28(actual3));
+        }
+        [Fact]
+        public void Test27()
+        {
+            var actual = 3;
+            var expected = "Burrrp";
+            Assert.Equal(expected, Method27(actual));
+            var actual2 = 5;
+            var expected2 = "Burrrrrp";
+            Assert.Equal(expected2, Method27(actual2));
+            var actual3 = 9;
+            var expected3 = "Burrrrrrrrrp";
+            Assert.Equal(expected3, Method27(actual3));
+        }
+    [Fact]
+        public void Test26()
+        {
+            var actual = "javascript is cool";
+            var expected = "j4v45cr1pt 15 c00l";
+            Assert.Equal(expected, Method26(actual));
+            var actual1 = "programming is fun";
+            var expected1 = "pr0gr4mm1ng 15 fun";
+            Assert.Equal(expected1, Method26(actual1));
+            var actual2 = "become a coder";
+            var expected2 = "b3c0m3 4 c0d3r";
+            Assert.Equal(expected2, Method26(actual2));
+        }
         [Fact]
         public void Test25()
         {
@@ -306,67 +409,62 @@ namespace Tests
         }
     }
 }
-//public void Test30()
-//{
-//    var actual = "";
-//    var expected = "";
-//    Assert.Equal(expected, Method30(actual));
-//} 
-//public void Test29()
+
+//public void Test40()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method29(actual));
 //} 
-//public void Test28()
+//public void Test39()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method28(actual));
 //} 
-//public void Test27()
+//public void Test38()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method27(actual));
 //} 
-//public void Test26()
+//public void Test37()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method26(actual));
 //} 
-//public void Test25()
+//public void Test36()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method25(actual));
 //} 
-//public void Test24()
+//public void Test35()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method24(actual));
 //} 
-//public void Test23()
+//public void Test34()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method23(actual));
 //} 
-//public void Test22()
+//public void Test33()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method22(actual));
 //} */
-//public void Test21()
+//public void Test32()
 //{
 //    var actual = "";
 //    var expected = "";
 //    Assert.Equal(expected, Method21(actual));
 //} 
-//public void Test20()
+//public void Test31()
 //{
 //    var actual = "";
 //    var expected = "";

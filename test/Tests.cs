@@ -52,18 +52,39 @@ namespace Tests
         //    var expected = "";
         //    Assert.Equal(expected, Method34(actual));
         //} 
-        //public void Test33()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method33(actual));
-        //} */
-        //public void Test32()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method32(actual));
-        //} 
+        [Fact]
+        public void Test33()
+        {
+            var actuala = "seas";
+            var actualb = "onal";
+            var expected = "Seasonal";
+            Assert.Equal(expected, Method33(actuala, actualb));
+            var actuala1 = "comp";
+            var actualb1 = "lete";
+            var expected1 = "Complete";
+            Assert.Equal(expected1, Method33(actuala1, actualb1));
+            var actuala2 = "lang";
+            var actualb2 = "uage";
+            var expected2 = "Language";
+            Assert.Equal(expected2, Method33(actuala2, actualb2));
+            var actuala3 = "mitc";
+            var actualb3 = "hell";
+            var expected3 = "Mitchell";
+            Assert.Equal(expected3, Method33(actuala3, actualb3));
+        }
+        [Fact]
+        public void Test32()
+        {
+            var actual = "loop";
+            var actual1 = "yummy";
+            var actual2 = "orange";
+            var actual3 = "munchkin";
+            Assert.True(Method32(actual));
+            Assert.True(Method32(actual1));
+            Assert.False(Method32(actual2));
+            Assert.False(Method32(actual3));
+
+        }
         [Fact]
         public void Test31()
         {

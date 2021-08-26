@@ -5,12 +5,44 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
-
+using System.Globalization;
 
 namespace Tests
 {
     public class edabit
     {
+        /// <summary>
+        /// Adds two words together and capatilize the first letter
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string Method33(string a, string b)
+        {
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+            return textInfo.ToTitleCase(a + b);
+        }
+        public static string Method33b(string a, string b) => char.ToUpper(a[0]) + a.Substring(1) + b;
+        public static string Method33c(string a, string b) => a.First().ToString().ToUpper() + string.Join("", a.Skip(1)) + b;
+
+
+        /// <summary>
+        /// Takes a word and returns true if the word has two consecutive identical letters.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static bool Method32(string s)
+        {
+            for (int i = 1; i < s.Length; i++)
+            {
+                if (s[i] == s[i - 1])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
 
         /// <summary>
         /// Takes a string, checks if it has the same number of x's and o's and returns either true or false.

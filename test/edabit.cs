@@ -12,6 +12,16 @@ namespace Tests
     public class edabit
     {
         /// <summary>
+        /// Stutters a word as if someone is struggling to read it.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string Method34(string s)
+        {
+            return (s[0].ToString() + s[1].ToString()) + "... " + (s[0].ToString() + s[1].ToString()) + "... " + s + "?";
+        }
+
+        /// <summary>
         /// Adds two words together and capatilize the first letter
         /// </summary>
         /// <param name="s"></param>

@@ -53,6 +53,19 @@ namespace Tests
         //    Assert.Equal(expected, Method34(actual));
         //} 
         [Fact]
+        public void Test34()
+        {
+            var actual = "incredible";
+            var expected = "in... in... incredible?";
+            Assert.Equal(expected, Method34(actual));
+            var actual1 = "enthusiastic";
+            var expected1 = "en... en... enthusiastic?";
+            Assert.Equal(expected1, Method34(actual1));
+            var actual2 = "outstanding";
+            var expected2 = "ou... ou... outstanding?";
+            Assert.Equal(expected2, Method34(actual2));
+        }
+        [Fact]
         public void Test33()
         {
             var actuala = "seas";

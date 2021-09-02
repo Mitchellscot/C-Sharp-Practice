@@ -46,12 +46,19 @@ namespace Tests
         //    var expected = "";
         //    Assert.Equal(expected, Method35(actual));
         //} 
-        //public void Test34()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method34(actual));
-        //} 
+        [Fact]
+        public void Test35()
+        {
+            var actual = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
+            var expected = "(123) 456-7890";
+            Assert.Equal(expected, Method35(actual));
+            var actual1 = new[] { 5, 1, 9, 5, 5, 5, 4, 4, 6, 8 };
+            var expected1 = "(519) 555-4468";
+            Assert.Equal(expected1, Method35(actual1));
+            var actual2 = new[] { 3, 4, 5, 5, 0, 1, 2, 5, 2, 7 };
+            var expected2 = "(345) 501-2527";
+            Assert.Equal(expected2, Method35(actual2));
+        }
         [Fact]
         public void Test34()
         {

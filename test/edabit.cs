@@ -12,6 +12,23 @@ namespace Tests
     public class edabit
     {
         /// <summary>
+        /// Takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string Method35(int[] a)
+        {
+            var sb = new StringBuilder();
+            sb.Append('(');
+            sb.Append($"{a[0]}{a[1]}{a[2]}");
+            sb.Append(") ");
+            sb.Append($"{a[3]}{a[4]}{a[5]}-");
+            sb.Append($"{a[6]}{a[7]}{a[8]}{a[9]}");
+
+            return sb.ToString();
+        }
+
+        /// <summary>
         /// Stutters a word as if someone is struggling to read it.
         /// </summary>
         /// <param name="s"></param>

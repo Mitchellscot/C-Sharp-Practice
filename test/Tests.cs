@@ -40,12 +40,19 @@ namespace Tests
         //    var expected = "";
         //    Assert.Equal(expected, Method36(actual));
         //} 
-        //public void Test35()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method35(actual));
-        //} 
+        [Fact]
+        public void Test36()
+        {
+            var actual = "space";
+            var expected = "s p a c e";
+            Assert.Equal(expected, Method36(actual));
+            var actual1 = "far out";
+            var expected1 = "f a r  o u t";
+            Assert.Equal(expected1, Method36(actual1));
+            var actual2 = "elongated musk";
+            var expected2 = "e l o n g a t e d   m u s k";
+            Assert.Equal(expected2, Method36(actual2));
+        }
         [Fact]
         public void Test35()
         {

@@ -11,6 +11,22 @@ namespace Tests
 {
     public class edabit
     {
+
+        /// <summary>
+        ///  Takes a string and returns a string with spaces in between all of the characters.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string Method36(string s)
+        {
+            var answer = string.Empty;
+            foreach (var c in s)
+            {
+                    answer += c + " ";
+            }
+
+            return answer.Trim();
+        }
         /// <summary>
         /// Takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
         /// </summary>

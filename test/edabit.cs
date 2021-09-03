@@ -11,6 +11,22 @@ namespace Tests
 {
     public class edabit
     {
+        /// <summary>
+        /// Returns the average of an array
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static double Method38(int[] a)
+        {
+            return Math.Round(a.Average(), 2);
+        }
+
+        /// <summary>
+        /// Finds the factorial of a given number using recursion
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static int Method37(int n) => n == 0 ? 1 : n * Method37(n - 1);
 
         /// <summary>
         ///  Takes a string and returns a string with spaces in between all of the characters.
@@ -38,7 +54,7 @@ namespace Tests
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
-        public static string Method35(int[] a)
+        public static string Method35b(int[] a)
         {
             var sb = new StringBuilder();
             sb.Append('(');
@@ -49,6 +65,7 @@ namespace Tests
 
             return sb.ToString();
         }
+        public static string Method35(int[] a) => string.Format("({0}{1}{2}) {3}{4}{5}-{6}{7}{8}{9}", a.Select(x => x.ToString()).ToArray());
 
         /// <summary>
         /// Stutters a word as if someone is struggling to read it.

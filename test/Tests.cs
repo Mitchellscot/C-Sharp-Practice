@@ -28,18 +28,32 @@ namespace Tests
         //    var expected = "";
         //    Assert.Equal(expected, Method38(actual));
         //} 
-        //public void Test37()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method37(actual));
-        //} 
-        //public void Test36()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method36(actual));
-        //} 
+        [Fact]
+        public void Test38()
+        {
+            var actual = new[] { 1, 0, 4, 5, 2, 4, 1, 2, 3, 3, 3 };
+            var expected = 2.55;
+            Assert.Equal(expected, Method38(actual));
+            var actual1 = new[] { 2, 3, 2, 3 };
+            var expected1 = 2.50;
+            Assert.Equal(expected1, Method38(actual1));
+            var actual2 = new[] { 3, 3, 3, 3, 3 };
+            var expected2 = 3.00;
+            Assert.Equal(expected2, Method38(actual2));
+        }
+        [Fact]
+        public void Test37()
+        {
+            var actual = 5;
+            var expected = 120;
+            Assert.Equal(expected, Method37(actual));
+            var actual1 = 3;
+            var expected1 = 6;
+            Assert.Equal(expected1, Method37(actual1));
+            var actual2 = 2;
+            var expected2 = 2;
+            Assert.Equal(expected2, Method37(actual2));
+        }
         [Fact]
         public void Test36()
         {

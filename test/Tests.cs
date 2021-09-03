@@ -47,7 +47,7 @@ namespace Tests
             var expected = "s p a c e";
             Assert.Equal(expected, Method36(actual));
             var actual1 = "far out";
-            var expected1 = "f a r  o u t";
+            var expected1 = "f a r   o u t";
             Assert.Equal(expected1, Method36(actual1));
             var actual2 = "elongated musk";
             var expected2 = "e l o n g a t e d   m u s k";

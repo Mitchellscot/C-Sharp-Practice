@@ -22,11 +22,17 @@ namespace Tests
             var answer = string.Empty;
             foreach (var c in s)
             {
-                    answer += c + " ";
+                answer += c + " ";
             }
 
             return answer.Trim();
         }
+        public static string Method36b(string s)
+        {
+            string r = string.Concat(s.Select(x => x + " "));
+            return r.Trim();
+        }
+
         /// <summary>
         /// Takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
         /// </summary>

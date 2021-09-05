@@ -11,6 +11,45 @@ namespace Tests
 {
     public class edabit
     {
+
+        /// <summary>
+        /// Takes three string arguments (first, last, and word) and returns true if word is found between first and last in the dictionary, otherwise false.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        public static bool Method40(string first, string last, string word)
+        {
+            if (word[0] >= first[0] && word[0] <= last[0])
+            {
+                if (word[1] > first[1])
+                {
+                    return true;
+                }
+                else if (word[1] == first[1])
+                {
+                    if (word[2] > first[2]) 
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// makes the last character of a string repeat n number of times
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static string Method39(string s, int n)
+        {
+            return string.Concat(s, string.Concat(Enumerable.Repeat(s.Last(), n - 1)));
+        }
+        public static string Method39a(string s, int n) => s + new string(s[s.Length - 1], n - 1);
+
         /// <summary>
         /// Returns the average of an array
         /// </summary>

@@ -10,24 +10,54 @@ namespace Tests
 {
     public class Tests
     {
-        //public void Test40()
+        //[Fact]
+        //public void Test41()
         //{
         //    var actual = "";
         //    var expected = "";
-        //    Assert.Equal(expected, Method40(actual));
+        //    Assert.Equal(expected, Method41(actual));
+        //    var actual1 = "";
+        //    var expected1 = "";
+        //    Assert.Equal(expected1, Method41(actual1));
+        //    var actual2 = "";
+        //    var expected2 = "";
+        //    Assert.Equal(expected2, Method41(actual2));
         //} 
-        //public void Test39()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method39(actual));
-        //} 
-        //public void Test38()
-        //{
-        //    var actual = "";
-        //    var expected = "";
-        //    Assert.Equal(expected, Method38(actual));
-        //} 
+        [Fact]
+        public void Test40()
+        {
+            var actuala = "apple";
+            var actualb = "banana";
+            var actualc = "azure";
+            var expected = true;
+            Assert.Equal(expected, Method40(actuala, actualb, actualc));
+            var actual1a = "monk";
+            var actual1b = "monument";
+            var actual1c = "monkey";
+            var expected1 = true;
+            Assert.Equal(expected1, Method40(actual1a, actual1b, actual1c));
+            var actual2a = "bookend";
+            var actual2b = "boolean";
+            var actual2c = "boost";
+            var expected2 = false;
+            Assert.Equal(expected2, Method40(actual2a, actual2b, actual2c));
+        }
+        [Fact]
+        public void Test39()
+        {
+            var actual = "Hello";
+            var actuala = 3;
+            var expected = "Hellooo";
+            Assert.Equal(expected, Method39(actual, actuala));
+            var actual1 = "hey";
+            var actualb = 6;
+            var expected1 = "heyyyyyy";
+            Assert.Equal(expected1, Method39(actual1, actualb));
+            var actual2 = "excuse me what?";
+            var actualc = 5;
+            var expected2 = "excuse me what?????";
+            Assert.Equal(expected2, Method39(actual2, actualc));
+        }
         [Fact]
         public void Test38()
         {

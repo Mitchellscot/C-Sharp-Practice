@@ -6906,19 +6906,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mitch\\.nuget\\packages\\": {}
+    "C:\\Users\\Mitch\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mitch\\Code\\C-Sharp-Practice\\test\\test.csproj",
+      "projectUniqueName": "E:\\Code\\C-Sharp-Practice\\test\\test.csproj",
       "projectName": "test",
-      "projectPath": "C:\\Users\\Mitch\\Code\\C-Sharp-Practice\\test\\test.csproj",
+      "projectPath": "E:\\Code\\C-Sharp-Practice\\test\\test.csproj",
       "packagesPath": "C:\\Users\\Mitch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mitch\\Code\\C-Sharp-Practice\\test\\obj\\",
+      "outputPath": "E:\\Code\\C-Sharp-Practice\\test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Mitch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

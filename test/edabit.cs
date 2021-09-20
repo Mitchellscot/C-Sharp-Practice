@@ -11,6 +11,72 @@ namespace Tests
 {
     public class edabit
     {
+        //takes 3 numbers: a, b, c and returns true if the last digit of a * b = the last digit of c.
+        public static bool Method44(int a, int b, int c)
+        {
+            return Math.Abs(a % 10) * Math.Abs(b % 10) == Math.Abs(c % 10) ? true : false; 
+        }
+
+        //takes a string and returns a string with its letters in alphabetical order.
+        public static string Method43a(string s)
+        {
+            var x = s.ToCharArray();
+            Array.Sort(x);
+            return new string(x);
+        }
+        public static string Method43b(string s) => new string(s.OrderBy(x => x).ToArray());
+        public static string Method43(string s) => string.Concat(s.OrderBy(c=>c));
+
+        //repeats each character in a string n times
+        public static string Method42(string s, int n)
+        {
+            var answer = string.Empty;
+            foreach (var c in s)
+            {
+                answer += String.Join("", Enumerable.Repeat(c, n));
+            }
+            return answer;
+        }
+        //Here s.Select acts as a foreach statement for each char in the string
+        public static string Method42a(string s, int n) => string.Concat(s.Select(c => new string(c,n)));
+
+        //takes an array of numbers and return both the minimum and maximum numbers, in that order.
+        public static int[] Method41(int[] arr)
+        {
+            return new[] {arr.Min(), arr.Max()};
+        }
+
+        /// <summary>
+        /// Takes three string arguments (first, last, and word) and returns true if word is found between first and last in the dictionary, otherwise false.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        public static bool Method40a(string first, string last, string word)
+        {
+            var manuallyOrderedWords = new[] { first, word, last };
+            var alphabeticallyOrderedWords = new[] { first, last, word };
+            //sorts the given words alphabetically
+            Array.Sort(alphabeticallyOrderedWords);
+            //Enumerable.SequenceEqual returns a boolean if first array is equal to the second
+            return manuallyOrderedWords.SequenceEqual(alphabeticallyOrderedWords);
+        }
+        public static bool Method40(string first, string last, string word) => first.CompareTo(word) == -1 && last.CompareTo(word) == 1; 
+
+
+        /// <summary>
+        /// makes the last character of a string repeat n number of times
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static string Method39(string s, int n)
+        {
+            return string.Concat(s, string.Concat(Enumerable.Repeat(s.Last(), n - 1)));
+        }
+        public static string Method39a(string s, int n) => s + new string(s[s.Length - 1], n - 1);
+
         /// <summary>
         /// Returns the average of an array
         /// </summary>

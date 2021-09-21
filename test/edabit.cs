@@ -11,7 +11,29 @@ namespace Tests
 {
     public class edabit
     {
-        //
+        //replaces all the vowels in a string with a specified character.
+        public static string Method48(string s, char b)
+        {
+            char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+            var answer = string.Empty;
+            foreach (var c in s)
+            {
+                if (vowels.Contains(c))
+                {
+                    answer += b;
+                }
+                else answer += c;
+            }
+            return answer;
+        }
+
+        //checks whether a given string is a palindrome or not
+        public static bool Method47(string s)
+        {
+            return string.Concat(s.Reverse()) == s ? true : false;
+        }
+
+        //returns a string in the form of an anonymous type that shows the count of numbers or letters in a given string
         public static string Method46(string s)
         {
             return "{ LETTERS =  " + s.Count(c => Char.IsLetter(c)) + ", DIGITS =  " + s.Count(c => Char.IsDigit(c)) + " }";

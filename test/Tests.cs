@@ -24,6 +24,38 @@ namespace Tests
         //    Assert.Equal(expected2, Method41(actual2));
         //}
         [Fact]
+        public void Test48()
+        {
+            var actuala = "the aardvark";
+            var actualb = '#';
+            var expected = "th# ##rdv#rk";
+            Assert.Equal(expected, Method48(actuala, actualb));
+            var actual1a = "minnie mouse";
+            var actual1b = '?';
+            var expected1 = "m?nn?? m??s?";
+            Assert.Equal(expected1, Method48(actual1a, actual1b));
+            var actual2a = "shakespeare";
+            var actual2b = '*';
+            var expected2 = "sh*k*sp**r*";
+            Assert.Equal(expected2, Method48(actual2a, actual2b));
+        }
+        [Fact]
+        public void Test47()
+        {
+            var actual = "mom";
+            var expected = true;
+            Assert.Equal(expected, Method47(actual));
+            var actual1 = "scary";
+            var expected1 = false;
+            Assert.Equal(expected1, Method47(actual1));
+            var actual2 = "reviver";
+            var expected2 = true;
+            Assert.Equal(expected2, Method47(actual2));
+            var actual3 = "stressed";
+            var expected3 = false;
+            Assert.Equal(expected3, Method47(actual3));
+        }
+        [Fact]
         public void Test46()
         {
            var actual = "Hello World";

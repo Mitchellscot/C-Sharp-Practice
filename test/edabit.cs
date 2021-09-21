@@ -11,10 +11,22 @@ namespace Tests
 {
     public class edabit
     {
+        //
+        public static string Method46(string s)
+        {
+            return "{ LETTERS =  " + s.Count(c => Char.IsLetter(c)) + ", DIGITS =  " + s.Count(c => Char.IsDigit(c)) + " }";
+        }
+
+        //retrieves the name of the subreddit from a reddit URL
+        public static string Method45(string s)
+        {
+            return s.Substring(s.LastIndexOf("/r/")+2).Trim('/');
+        }
+
         //takes 3 numbers: a, b, c and returns true if the last digit of a * b = the last digit of c.
         public static bool Method44(int a, int b, int c)
         {
-            return Math.Abs(a % 10) * Math.Abs(b % 10) == Math.Abs(c % 10) ? true : false; 
+            return Math.Abs(a * b % 10) == Math.Abs(c % 10) ? true : false; 
         }
 
         //takes a string and returns a string with its letters in alphabetical order.

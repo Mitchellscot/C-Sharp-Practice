@@ -24,6 +24,32 @@ namespace Tests
         //    Assert.Equal(expected2, Method41(actual2));
         //}
         [Fact]
+        public void Test46()
+        {
+           var actual = "Hello World";
+           var expected = "{ LETTERS =  10, DIGITS =  0 }";
+           Assert.Equal(expected, Method46(actual));
+           var actual1 = "H3ll0 Wor1d";
+           var expected1 = "{ LETTERS =  7, DIGITS =  3 }";
+           Assert.Equal(expected1, Method46(actual1));
+           var actual2 = "149990";
+           var expected2 = "{ LETTERS =  0, DIGITS =  6 }";
+           Assert.Equal(expected2, Method46(actual2));
+        }
+        [Fact]
+        public void Test45()
+        {
+           var actual = "https://www.reddit.com/r/funny/";
+           var expected = "funny";
+           Assert.Equal(expected, Method45(actual));
+           var actual1 = "https://www.reddit.com/r/relationships/";
+           var expected1 = "relationships";
+           Assert.Equal(expected1, Method45(actual1));
+           var actual2 = "https://www.reddit.com/r/mildlyinteresting/";
+           var expected2 = "mildlyinteresting";
+           Assert.Equal(expected2, Method45(actual2));
+        }
+        [Fact]
         public void Test44()
         {
             var actuala = 25;

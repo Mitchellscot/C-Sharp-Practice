@@ -432,6 +432,7 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.vscode
 
 .DS_Store
 appsettings.Local.json
